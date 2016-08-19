@@ -5,13 +5,16 @@ Created on Dec 2, 2015
 '''
 # simple flask app
 
+from datetime import datetime
+import time
+
 from flask import Flask, render_template, request, session
 import mysql.connector
-from werkzeug.utils import redirect
-import time
-from datetime import datetime
 from werkzeug.exceptions import abort
-from bloglib.dbConfig import db_connect
+from werkzeug.utils import redirect
+
+from bloglib.dbconfig import db_connect
+
 
 app = Flask(__name__)
 
